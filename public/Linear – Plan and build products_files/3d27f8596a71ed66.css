@@ -1,0 +1,1 @@
+.Layout_container__BVtmP{display:flex;flex-direction:column;width:100%}.Layout_content__PrPCk{display:flex;flex-direction:column;flex:1 1;min-height:calc(100 * var(--dvh))}.Layout_container__BVtmP:not(.Layout_variant-full__YpEBE) [data-header]~.Layout_content__PrPCk{padding-top:calc(var(--header-top) + var(--header-height))}
