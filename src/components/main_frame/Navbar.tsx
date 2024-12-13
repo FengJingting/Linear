@@ -2,46 +2,25 @@ import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "0.5rem 2rem",
-        backgroundColor: "#1a1a1a",
-        color: "#ffffff",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
+    <nav className="w-full fixed top-2 mx-48 z-50 flex justify-between items-center px-8 py-2 bg-transparent text-white shadow-lg">
       {/* Logo Section */}
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="flex flex-1 items-center justify-center">
         <img
-          src="logo.svg" // 替换成你的Logo路径
+          src="logo-light.png" // 替换成你的Logo路径
           alt="Logo"
-          style={{ height: "24px", marginRight: "0.5rem" }}
+          className="h-6 mr-2"
         />
-        <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Linear</span>
+        <span className="font-bold text-lg">Linear</span>
       </div>
 
       {/* Navigation Links */}
-      <div style={{ display: "flex", gap: "1.5rem" }}>
+      <div className="flex flex-1 items-center justify-center">
         {["Features", "Changelog", "Pricing", "Company", "Contact"].map(
           (item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              style={{
-                color: "#ffffff",
-                textDecoration: "none",
-                fontSize: "0.9rem",
-                transition: "color 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.color = "#9f9f9f";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.color = "#ffffff";
-              }}
+              className="text-sm hover:text-gray-400 transition-colors duration-200 flex-1 text-center"
             >
               {item}
             </a>
@@ -50,46 +29,11 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Button Section */}
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <button
-          style={{
-            backgroundColor: "#2c2c2c",
-            color: "#ffffff",
-            padding: "0.5rem 1rem",
-            border: "none",
-            borderRadius: "4px",
-            fontSize: "0.9rem",
-            cursor: "pointer",
-            transition: "background-color 0.2s ease",
-          }}
-          onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = "#3a3a3a";
-          }}
-          onMouseLeave={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = "#2c2c2c";
-          }}
-        >
+      <div className="flex flex-1 items-center justify-center gap-4">
+        <button className="bg-gray-800 text-sm px-4 py-2 rounded-md hover:bg-gray-700 transition-colors duration-200">
           Log in
         </button>
-        <button
-          style={{
-            backgroundColor: "#ffffff",
-            color: "#000000",
-            padding: "0.5rem 1rem",
-            border: "none",
-            borderRadius: "4px",
-            fontSize: "0.9rem",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "background-color 0.2s ease",
-          }}
-          onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = "#f0f0f0";
-          }}
-          onMouseLeave={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = "#ffffff";
-          }}
-        >
+        <button className="bg-white text-black font-bold text-sm px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200">
           Sign up
         </button>
       </div>
