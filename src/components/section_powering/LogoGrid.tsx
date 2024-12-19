@@ -2,12 +2,12 @@ import React from "react";
 import LogoItem from "./LogoItem";
 
 const logos = [
-  { logo: "ramp-logo.svg", alt: "Ramp" },
-  { logo: "vercel-logo.svg", alt: "Vercel" },
-  { logo: "scale-logo.svg", alt: "Scale" },
-  { logo: "arc-logo.svg", alt: "Arc" },
-  { logo: "cashapp-logo.svg", alt: "Cash App" },
-  { logo: "retool-logo.svg", alt: "Retool" },
+  { logo: "./public/logo-light.png", alt: "Ramp" },
+  { logo: "./public/logo-light.png", alt: "Vercel" },
+  { logo: "./public/logo-light.png", alt: "Scale" },
+  { logo: "./public/logo-light.png", alt: "Arc" },
+  { logo: "./public/logo-light.png", alt: "Cash App" },
+  { logo: "./public/logo-light.png", alt: "Retool" },
 ];
 
 const LogoGrid: React.FC = () => {

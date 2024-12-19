@@ -1,18 +1,13 @@
 import React from "react";
 
-interface FooterColumnProps {
-  title: string;
-  items: string[];
-}
-
-const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => {
+const FooterColumn: React.FC<{ title: string; items: string[] }> = ({ title, items }) => {
   return (
-    <div>
-      <h3 className="text-white font-bold mb-4">{title}</h3>
-      <ul className="text-gray-400 space-y-2">
-        {items.map((item, index) => (
-          <li key={index} className="hover:text-white transition">
-            <a href="#">{item}</a>
+    <div className="min-w-0">
+      <h4 className="text-white font-bold mb-4">{title}</h4>
+      <ul>
+        {items.map((item, idx) => (
+          <li key={idx} className="text-gray-400 truncate mb-2 hover:text-white">
+            {item}
           </li>
         ))}
       </ul>

@@ -2,41 +2,35 @@ import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="w-full fixed top-2 mx-48 z-50 flex justify-between items-center px-8 py-2 bg-transparent text-white shadow-lg">
+    <nav className="flex fixed top-2 left-0 right-0 mx-auto z-50 w-full max-w-screen-lg items-center px-8 py-2 bg-black/75 rounded-full text-white shadow-lg">
       {/* Logo Section */}
-      <div className="flex flex-1 items-center justify-center">
+      <a href="#" className="flex items-center justify-center flex-1 text-lg font-bold">
         <img
           src="logo-light.png" // 替换成你的Logo路径
           alt="Logo"
           className="h-6 mr-2"
         />
-        <span className="font-bold text-lg">Linear</span>
-      </div>
+        Linear
+      </a>
 
       {/* Navigation Links */}
-      <div className="flex flex-1 items-center justify-center">
-        {["Features", "Changelog", "Pricing", "Company", "Contact"].map(
-          (item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm hover:text-gray-400 transition-colors duration-200 flex-1 text-center"
-            >
-              {item}
-            </a>
-          )
-        )}
-      </div>
+      {["Features", "Method", "Customers", "Changelog", "Pricing", "Company", "Contact"].map((item) => (
+        <a
+          key={item}
+          href={`#${item.toLowerCase()}`}
+          className="flex items-center justify-center flex-1 text-sm hover:text-gray-400 transition-colors duration-200"
+        >
+          {item}
+        </a>
+      ))}
 
       {/* Button Section */}
-      <div className="flex flex-1 items-center justify-center gap-4">
-        <button className="bg-gray-800 text-sm px-4 py-2 rounded-md hover:bg-gray-700 transition-colors duration-200">
-          Log in
-        </button>
-        <button className="bg-white text-black font-bold text-sm px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200">
-          Sign up
-        </button>
-      </div>
+      <button className="bg-gray-800 text-sm px-4 py-2 rounded-md hover:bg-gray-700 transition-colors duration-200 whitespace-nowrap mx-2 max-w-xs">
+        Log in
+      </button>
+      <button className="bg-white text-black font-bold text-sm px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap mx-2 max-w-xs">
+        Sign up
+      </button>
     </nav>
   );
 };

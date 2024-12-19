@@ -28,15 +28,15 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-black py-12 px-6 w-full">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-            {/* Logo */}
-            <FooterLogo />
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-8 w-full">
+        {/* Logo */}
+        <FooterLogo />
 
-            {/* Footer Columns */}
-            {footerData.map((column, index) => (
-            <FooterColumn key={index} title={column.title} items={column.items} />
-            ))}
-        </div>
+        {/* Footer Columns */}
+        {footerData.map((column, index) => (
+          <FooterColumn key={index} title={column.title} items={column.items} />
+        ))}
+      </div>
     </footer>
   );
 };
