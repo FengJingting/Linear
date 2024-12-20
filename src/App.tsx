@@ -15,59 +15,88 @@ import SectionInit from "./components/section_init/SectionInit";
 import CollaborationSection from "./components/section_collaborate/CollaborationSection";
 import SectionPlan from "./components/section_plan/SectionPlan";
 import SectionBuilt from "./components/section_built/SectionBuilt";
+import SectionZero from "./components/main_frame/SectionZero";
+import InsightsSection from "./components/section_insight/InsightsSection";
 
 const App: React.FC = () => {
   return (
     <div className="flex justify-center bg-black min-h-screen">
       {/* section-linear */}
-      <div className="w-full max-w-screen-lg bg-gray-100 p-4 h-full">
+      <div className=" mx-[187px] px-[32px] h-full max-w-[1088px]">
         <Navbar/>
         {/* section-linear */}
-          <div className="flex-1 bg-blue-500 mt-40">
+          <div className="flex-1 mt-40">
             <HeroTitle />
             <ButtonGroup />
             <PreviewImage />
           </div>
         {/* section-powering */}
-          <div className="flex-1 bg-green-500 mt-20">
+          <div className="flex-1 mt-60">
             <HeaderText />
             <LogoGrid />
           </div>
         {/* section-made */}
-          <div className="flex-1 bg-red-500 mt-20">
+          <div className="flex-1 mt-60">
             <FeatureHeaderText />
             <FeatureGrid />
           </div>
         {/* section-set */}
-          <div className="flex-1 bg-yellow-500 mt-20">
-            <SectionHeader />
-          </div>
+        <div className="flex-1 mt-60">
+          <SectionZero
+              linkHref="#"
+              linkText="Project and long-term planning"
+              headingText={["Set the product direction"]}
+              subHeading="Align your team around a unified product timeline."
+              description=" Plan, manage, and track all product initiatives with Linear’s visual planning tools."
+              imageSrc="./public/section_set_0.png" // 替换为实际路径
+              imageAlt="Section preview"
+            />
+        </div>
+        
         {/* section-manage */}
-        <ManageSection
+        <div className="flex-1 mt-60"><ManageSection
           leftTitle="Manage projects end-to-end"
           leftDescription="Consolidate specs, milestones, tasks, and other documentation in one centralized location."
           rightTitle="Project updates"
           rightDescription="Communicate progress and project health with built-in project updates."
-        />
-        <div className="flex-1 bg-yellow-500 mt-20">
+        /></div>
+        
+        <div className="flex-1 bg-yellow-500 mt-60">
           <SectionIdeate />
         </div>
+        
         <SectionInit />
 
-        <div className="flex-1 bg-yellow-500 mt-20">
-          <SectionHeader />
+        <div className="flex-1 mt-60">
+          <SectionZero
+              linkHref="#"
+              linkText="Task tracking and sprint planning"
+              iconColor="rgb(212, 177, 68)"
+              headingText={["Issue tracking","you’ll enjoy using"]}
+              subHeading="Align your team around a unified product timeline."
+              description=" Optimized for speed and efficiency. Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team."
+              imageSrc="./public/section_set_0.png" // 替换为实际路径
+              imageAlt="Section preview"
+            />
         </div>
+        <div className="flex-1 mt-60">
         <ManageSection
           leftTitle="Manage projects end-to-end"
           leftDescription="Consolidate specs, milestones, tasks, and other documentation in one centralized location."
           rightTitle="Project updates"
           rightDescription="Communicate progress and project health with built-in project updates."
         />
+        </div>
+
+        <div className="flex-1 mt-60">
+        <InsightsSection />
+        </div>
+        
         <SectionInit />
-        <div className="flex-1 bg-yellow-500 mt-20">
+        <div className="flex-1 bg-yellow-500 mt-60">
           <CollaborationSection />
         </div>
-        <div className="flex-1 bg-yellow-500 mt-20">
+        <div className="flex-1 bg-yellow-500 mt-60">
           <SectionBuilt />
         </div>
           

@@ -23,31 +23,45 @@ const Scroll: React.FC = () => {
       <div
         ref={scrollRef}
         className="flex overflow-x-scroll gap-6 px-6 scrollbar-hide"
+        style={{
+          width: "100%",
+          whiteSpace: "nowrap",
+          msOverflowStyle: "none", // IE 和 Edge
+          scrollbarWidth: "none", // Firefox
+        }}
       >
-        <ScrollCard
-          title="Customer Requests"
-          description="Build what customers actually want"
-          buttonLabel=">"
-          icon="📩"
-        />
-        <ScrollCard
-          title="Powerful git workflows"
-          description="Automate pull requests and commit workflows"
-          buttonLabel="+"
-          icon="🔗"
-        />
-        <ScrollCard
-          title="Linear Mobile"
-          description="Move product work forward from anywhere"
-          buttonLabel=">"
-          icon="📱"
-        />
-        <ScrollCard
-          title="Linear Asks"
-          description="Turn work into action items effortlessly"
-          buttonLabel=">"
-          icon="⚡"
-        />
+        <div className="flex gap-6 w-max"> {/* 设置宽度最大值 */}
+          <ScrollCard
+            title="Customer Requests"
+            description="Build what customers actually want"
+            buttonLabel=">"
+            image="./public/scroll_0.avif"
+          />
+          <ScrollCard
+            title="Powerful git workflows"
+            description="Automate pull requests and commit workflows"
+            buttonLabel="+"
+            image="./public/scroll_1.avif"
+          />
+          <ScrollCard
+            title="Linear Mobile"
+            description="Move product work forward from anywhere"
+            buttonLabel=">"
+            image="./public/scroll_2.avif"
+          />
+          <ScrollCard
+            title="Linear Asks"
+            description="Turn work into action items effortlessly"
+            buttonLabel=">"
+            image="./public/scroll_0.avif"
+          />
+          <ScrollCard
+            title="Linear Asks"
+            description="Turn work into action items effortlessly"
+            buttonLabel=">"
+            image="./public/scroll_0.avif"
+          />
+        </div>
       </div>
 
       {/* 滑动按钮 */}

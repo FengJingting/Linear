@@ -1,10 +1,14 @@
+import CustomHeading from "../fonts/CustomHeading";
 const FeatureHeaderText: React.FC = () => {
   return (
     <div className="flex flex-col md:flex-row items-end md:justify-between mb-12">
       {/* 左侧 h2 主标题 */}
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 md:mb-0 md:max-w-md self-end">
-        Made for modern product teams
-      </h2>
+      <CustomHeading
+        lines={[
+          "Made for modern",
+          "product teams",
+        ]}
+      />
 
       {/* 右侧 p 副标题 */}
       <p className="text-gray-400 md:max-w-lg self-end">

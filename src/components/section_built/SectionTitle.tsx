@@ -1,21 +1,32 @@
+import SectionItem from "../fonts/SectionItem";
+import SubHeading from "../fonts/SubHeading";
+
 interface SectionTitleProps {
-    smallTitle: string;
-    mainTitle: string;
-    description: string;
-  }
-  
-  const SectionTitle: React.FC<SectionTitleProps> = ({
-    smallTitle,
-    mainTitle,
-    description,
-  }) => {
-    return (
-      <div className="mb-8">
-        <p className="text-gray-400 text-sm font-medium mb-4">{smallTitle}</p>
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">{mainTitle}</h1>
-        <p className="text-gray-400">{description}</p>
-      </div>
-    );
-  };
-  
-  export default SectionTitle;
+  smallTitle: string;
+  mainTitle: string[]; // 将 mainTitle 改为字符串数组
+  description: string[];
+}
+
+const SectionTitle: React.FC<SectionTitleProps> = ({
+  smallTitle,
+  mainTitle,
+  description,
+}) => {
+  return (
+    <div className="mb-8">
+      <SectionItem
+        linkHref="#"
+        linkText={smallTitle}
+        headingText={mainTitle}
+        iconColor="rgba(0, 0, 0, 0)" // 红色图标
+      />
+
+      {/* 描述 */}
+      <SubHeading
+        lines={description}
+      />
+    </div>
+  );
+};
+
+export default SectionTitle;

@@ -1,25 +1,53 @@
 import React from "react";
+import SubHeading from "../fonts/SubHeading";
 
 interface ScrollCardProps {
   title: string;
   description: string;
   buttonLabel: string;
-  icon: React.ReactNode;
+  image?: string; // 图片路径
 }
 
-const ScrollCard: React.FC<ScrollCardProps> = ({ title, description, buttonLabel, icon }) => {
+const ScrollCard: React.FC<ScrollCardProps> = ({
+  title,
+  description,
+  buttonLabel,
+  image,
+}) => {
   return (
-    <div className="bg-gray-800 rounded-lg p-6 flex flex-col justify-between w-72 shadow-md">
-      {/* 上部分内容区域 */}
-      <div className="bg-gray-700 rounded mb-4 flex-grow h-32">
-        <div className="flex items-center justify-center h-full text-white text-lg">{icon}</div>
+    <div
+      className="flex flex-col justify-center items-start bg-gray-900 rounded-lg shadow-lg cursor-pointer text-gray-300"
+      style={{
+        height: "469px",
+        WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
+      }}
+    >
+      {/* 图片部分 */}
+      <div className="relative bg-gray-800 rounded-lg overflow-hidden h-[469px] w-[336px]">
+        <img
+          src={image}
+          alt={title}
+          className="block flex-shrink-0 cursor-pointer box-border"
+        />
       </div>
 
-      {/* 下部分文字和按钮 */}
-      <div>
-        <h3 className="text-white font-semibold text-lg">{title}</h3>
-        <p className="text-gray-400 text-sm mb-4">{description}</p>
-        <button className="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full text-white hover:bg-gray-600">
+
+      <div
+        className="flex flex-row justify-between items-end w-[272px] h-[69px] gap-[24px] cursor-pointer text-gray-300"
+      >
+        {/* 中间的内容 */}
+        <div className="flex flex-col justify-end items-start gap-1.5 w-full max-w-[360px]">
+          {/* 标题 */}
+          <SubHeading lines={[title]} />
+          
+          {/* 描述 */}
+          <p className="text-[#f7f8f8] inline-block text-[16px] font-normal leading-[24px] tracking-[-0.16px]">
+            {description}
+          </p>
+        </div>
+
+        {/* 按钮 */}
+        <button className="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-gray-700">
           {buttonLabel}
         </button>
       </div>

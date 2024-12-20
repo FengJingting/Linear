@@ -11,8 +11,8 @@ const SectionBuilt: React.FC = () => {
         <div>
           <SectionTitle
             smallTitle="Under the hood"
-            mainTitle="Built on strong foundations"
-            description="Linear is so simple to use, it’s easy to overlook the wealth of complex technologies packed under the hood that keep Linear robust, safe, and blazing fast."
+            mainTitle={["Built on", "strong", "foundations"]}
+            description={["Linear is so simple to use, it’s easy","to overlook the wealth of complex", "technologies packed under the hood that","keep Linear robust, safe, and blazing fast."]}
           />
           <FeatureList
             features={[

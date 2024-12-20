@@ -7,7 +7,7 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ image, title }) => {
   return (
-    <div className="bg-black border border-gray-800 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 min-h-[300px] flex flex-col">
+    <div className="bg-black border border-gray-800 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 min-h-[270px] flex flex-col">
       {/* 图片部分 */}
       <div className="mb-6 pt-4">
         <img src={image} alt={title} className="w-full h-full object-cover" />

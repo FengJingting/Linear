@@ -18,7 +18,7 @@ const features = [
 
 const FeatureGrid: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
       {features.map((feature, index) => (
         <FeatureCard key={index} image={feature.image} title={feature.title} />
       ))}

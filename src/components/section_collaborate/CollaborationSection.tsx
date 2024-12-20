@@ -1,23 +1,33 @@
 import React from "react";
-import Scroll from "./Scroll"; // 引入子组件 Scroll
+import Scroll from "./Scroll"; 
+import SectionItem from "../fonts/SectionItem";
 
 const CollaborationSection: React.FC = () => {
   return (
     <section className="bg-black text-white py-16 px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="fkex flex-row max-w-6xl mx-auto">
         {/* 标题部分 */}
-        <div className="mb-12">
-          <p className="text-purple-400 text-sm font-medium mb-4">
-            Workflows and integrations
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Collaborate across tools and teams
-          </h1>
-          <p className="text-gray-400 max-w-3xl">
-            Expand the capabilities of the Linear system with a wide variety of
-            integrations that keep everyone in your organization aligned and focused.
-          </p>
+        <div className="flex flex-row justify-between items-end gap-12 mb-12">
+        {/* 左侧部分 */}
+        <div className="flex-1">
+          <SectionItem
+            linkHref="#"
+            linkText="Workflows and integrations"
+            headingText={["Collaborate", "across tools", "and teams"]}
+            iconColor="rgb(181, 154, 255)"
+          />
         </div>
+
+        {/* 右侧部分 */}
+        <div className="flex-1">
+        <p className="text-gray-400 max-w-full">
+          <span className="block">Expand the capabilities of the</span>
+          <span className="block">Linear system with a wide variety of</span>
+          <span className="block">integrations that keep everyone in</span>
+          <span className="block">your organization aligned and focused.</span>
+        </p>
+        </div>
+      </div>
 
         {/* 滑动窗口部分 */}
         <Scroll />
