@@ -1,36 +1,38 @@
 import React, { useRef } from "react";
 import ScrollCard from "./ScrollCard";
-import ScrollControls from "./ScrollControls";
 
 const Scroll: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: -336, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: 336, behavior: "smooth" });
     }
   };
 
   return (
-    <div className="relative bg-black py-8">
-      {/* 滑动内容 */}
-      <div
-        ref={scrollRef}
-        className="flex overflow-x-scroll gap-6 px-6 scrollbar-hide"
-        style={{
-          width: "100%",
-          whiteSpace: "nowrap",
-          msOverflowStyle: "none", // IE 和 Edge
-          scrollbarWidth: "none", // Firefox
-        }}
-      >
-        <div className="flex gap-6 w-max"> {/* 设置宽度最大值 */}
+    <div className="relative bg-black py-8 -mr-[187px] -ml-[336px]">
+      {/* Carousel Wrapper */}
+      <div className="overflow-x-auto">
+        <div
+          ref={scrollRef}
+          className="flex h-[469px] overflow-x-scroll gap-2 px-6 scrollbar-hide"
+          style={{
+            scrollSnapType: "x mandatory",
+            msOverflowStyle: "none",
+            scrollbarWidth: "none",
+          }}
+        >
+          {/* 左侧空白占位 */}
+          <div style={{ minWidth: "336px", flexShrink: 0 }}></div>
+
+          {/* Carousel Items */}
           <ScrollCard
             title="Customer Requests"
             description="Build what customers actually want"
@@ -56,16 +58,49 @@ const Scroll: React.FC = () => {
             image="./public/scroll_0.avif"
           />
           <ScrollCard
-            title="Linear Asks"
-            description="Turn work into action items effortlessly"
+            title="Linear Integrations"
+            description="Enhance your Linear experience"
             buttonLabel=">"
-            image="./public/scroll_0.avif"
+            image="./public/scroll_3.avif"
           />
         </div>
       </div>
 
-      {/* 滑动按钮 */}
-      <ScrollControls onScrollLeft={scrollLeft} onScrollRight={scrollRight} />
+      {/* Scroll Controls */}
+      <div className="flex justify-center items-center mt-4 gap-4">
+        <button
+          type="button"
+          aria-label="Previous slide"
+          className="w-10 h-10 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full border border-gray-700 hover:bg-gray-700 hover:border-gray-600 focus:outline-none"
+          onClick={scrollLeft}
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M9.78 4.78a.75.75 0 0 0-1.06-1.06l-4 4a.75.75 0 0 0-.007 1.054l3.903 4a.75.75 0 0 0 1.073-1.048l-3.385-3.47L9.78 4.78Z" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          aria-label="Next slide"
+          className="w-10 h-10 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full border border-gray-700 hover:bg-gray-700 hover:border-gray-600 focus:outline-none"
+          onClick={scrollRight}
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M6.47 11.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 .007-1.054l-3.903-4a.75.75 0 1 0-1.073 1.048l3.385-3.47L6.47 11.47Z" />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 };

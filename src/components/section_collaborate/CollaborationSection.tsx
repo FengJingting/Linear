@@ -1,5 +1,5 @@
 import React from "react";
-import Scroll from "./Scroll"; 
+
 import SectionItem from "../fonts/SectionItem";
 
 const CollaborationSection: React.FC = () => {
@@ -13,25 +13,20 @@ const CollaborationSection: React.FC = () => {
           <SectionItem
             linkHref="#"
             linkText="Workflows and integrations"
-            headingText={["Collaborate", "across tools", "and teams"]}
+            headingText={["Collaborate across", " tools and teams"]}
             iconColor="rgb(181, 154, 255)"
           />
         </div>
 
         {/* 右侧部分 */}
         <div className="flex-1">
-        <p className="text-gray-400 max-w-full">
-          <span className="block">Expand the capabilities of the</span>
-          <span className="block">Linear system with a wide variety of</span>
-          <span className="block">integrations that keep everyone in</span>
-          <span className="block">your organization aligned and focused.</span>
+        <p className="text-gray-400 max-w-full ml-24">
+          Expand the capabilities of the Linear system with a wide variety of ntegrations that keep everyone in your organization aligned and focused.
         </p>
         </div>
       </div>
-
-        {/* 滑动窗口部分 */}
-        <Scroll />
       </div>
+      
     </section>
   );
 };

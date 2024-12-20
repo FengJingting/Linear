@@ -17,6 +17,7 @@ import SectionPlan from "./components/section_plan/SectionPlan";
 import SectionBuilt from "./components/section_built/SectionBuilt";
 import SectionZero from "./components/main_frame/SectionZero";
 import InsightsSection from "./components/section_insight/InsightsSection";
+import Scroll from "./components/section_collaborate/Scroll";
 
 const App: React.FC = () => {
   return (
@@ -93,9 +94,14 @@ const App: React.FC = () => {
         </div>
         
         <SectionInit />
-        <div className="flex-1 bg-yellow-500 mt-60">
+        <div
+          className="flex-1 mt-60 "
+        >
           <CollaborationSection />
         </div>
+          {/* 滑动窗口部分 */}
+          <Scroll />
+
         <div className="flex-1 bg-yellow-500 mt-60">
           <SectionBuilt />
         </div>
