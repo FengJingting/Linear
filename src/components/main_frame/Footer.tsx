@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-black py-12 px-6 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-8 w-full">
+    <footer className="bg-black border-t border-1px border-gray-900 py-12 px-6 w-full">
+      <div className="mx-[187px] px-[32px] max-w-[1088px] grid grid-cols-1 md:grid-cols-6 gap-8 w-full">
         {/* Logo */}
         <FooterLogo />
 

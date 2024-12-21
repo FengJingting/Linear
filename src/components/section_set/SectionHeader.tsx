@@ -7,7 +7,7 @@ const SectionHeader: React.FC = () => {
      <SectionItem
         linkHref="#"
         linkText="Project and long-term planning"
-        headingText={["Set the product direction"]}
+        headingText={"Set the product direction"}
       />
 
       {/* 副标题 */}
@@ -19,8 +19,6 @@ const SectionHeader: React.FC = () => {
       <div className="flex flex-col items-center justify-center w-[801px] h-[721.906px] relative mt-10 md:mt-0 pointer-events-none"
         style={{
           color: "rgb(247, 248, 248)",
-          fontFamily:
-            'Linear, "SF Pro Display", -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
           fontFeatureSettings: '"cv01", "ss03"',
           WebkitFontSmoothing: "antialiased",
           WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",

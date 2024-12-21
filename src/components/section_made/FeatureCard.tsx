@@ -15,10 +15,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ image, title }) => {
 
       {/* 标题和按钮 */}
       <div className="flex justify-between items-end mt-auto">
-        <h3 className="text-xl font-semibold text-white leading-none max-w-[200px]">
+        <h3 className="text-xl font-semibold text-white leading-none max-w-[210px]">
           {title}
         </h3>
-        <button className="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 text-white text-lg">
+        <button className="w-10 h-10 flex items-center justify-center border border-1px border-gray-800 rounded-full hover:bg-gray-700 text-white text-lg">
           +
         </button>
       </div>

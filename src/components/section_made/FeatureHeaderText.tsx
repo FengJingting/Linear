@@ -4,10 +4,8 @@ const FeatureHeaderText: React.FC = () => {
     <div className="flex flex-col md:flex-row items-end md:justify-between mb-12">
       {/* 左侧 h2 主标题 */}
       <CustomHeading
-        lines={[
-          "Made for modern",
-          "product teams",
-        ]}
+        lines={
+          "Made for modern product teams"}
       />
 
       {/* 右侧 p 副标题 */}

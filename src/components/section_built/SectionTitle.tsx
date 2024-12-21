@@ -3,8 +3,8 @@ import SubHeading from "../fonts/SubHeading";
 
 interface SectionTitleProps {
   smallTitle: string;
-  mainTitle: string[]; // 将 mainTitle 改为字符串数组
-  description: string[];
+  mainTitle: string; // 将 mainTitle 改为字符串数组
+  description: string;
 }
 
 const SectionTitle: React.FC<SectionTitleProps> = ({
@@ -18,7 +18,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
         linkHref="#"
         linkText={smallTitle}
         headingText={mainTitle}
-        iconColor="rgba(0, 0, 0, 0)" // 红色图标
+        iconColor="rgba(0, 0, 0, 0)"
       />
 
       {/* 描述 */}

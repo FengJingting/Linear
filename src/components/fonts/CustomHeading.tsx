@@ -1,10 +1,11 @@
 import React from "react";
 
 interface HeadingProps {
-  lines: string[]; // 接收多个字符串作为内容行
+  lines: string; // 接收内容
+  width?: string; // 可选宽度属性
 }
 
-const CustomHeading: React.FC<HeadingProps> = ({ lines }) => {
+const CustomHeading: React.FC<HeadingProps> = ({ lines, width }) => {
   return (
     <h1
       className="text-[56px] font-[538] leading-none tracking-[-1.82px] inline-block text-[#f7f8f8] filter blur-0"
@@ -14,13 +15,10 @@ const CustomHeading: React.FC<HeadingProps> = ({ lines }) => {
         fontFeatureSettings: '"cv01", "ss03"',
         fontVariationSettings: '"opsz" 28',
         colorScheme: "dark",
+        width: width || "75%", // 如果未传入宽度，则默认使用 100%
       }}
     >
-      {lines.map((line, index) => (
-        <span key={index} className="block">
-          {line}
-        </span>
-      ))}
+      {lines}
     </h1>
   );
 };

@@ -17,8 +17,9 @@ const Scroll: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-black py-8 -mr-[187px] -ml-[336px]">
-      {/* Carousel Wrapper */}
+    <div>
+      <div className="relative bg-black py-8 -mr-[187px] -ml-[336px]">
+        {/* Carousel Wrapper */}
       <div className="overflow-x-auto">
         <div
           ref={scrollRef}
@@ -65,6 +66,8 @@ const Scroll: React.FC = () => {
           />
         </div>
       </div>
+      </div>
+      
 
       {/* Scroll Controls */}
       <div className="flex justify-center items-center mt-4 gap-4">
@@ -90,15 +93,15 @@ const Scroll: React.FC = () => {
           className="w-10 h-10 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full border border-gray-700 hover:bg-gray-700 hover:border-gray-600 focus:outline-none"
           onClick={scrollRight}
         >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6.47 11.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 .007-1.054l-3.903-4a.75.75 0 1 0-1.073 1.048l3.385-3.47L6.47 11.47Z" />
-          </svg>
+         <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6.47 11.47a.75.75 0 1 0 1.06 1.06l4-4a.75.75 0 0 0 .007-1.054l-3.903-4a.75.75 0 1 0-1.073 1.048l3.385 3.47L6.47 11.47Z" />
+            </svg>
         </button>
       </div>
     </div>

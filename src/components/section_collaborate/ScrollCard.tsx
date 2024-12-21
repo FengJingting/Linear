@@ -10,7 +10,6 @@ interface ScrollCardProps {
 const ScrollCard: React.FC<ScrollCardProps> = ({
   title,
   description,
-  buttonLabel,
   image,
 }) => {
   return (
@@ -25,45 +24,41 @@ const ScrollCard: React.FC<ScrollCardProps> = ({
       }}
     >
       {/* 渐变遮罩层 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-1220s"></div>
 
       {/* 内容部分 */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 px-4 py-6 bg-black bg-opacity-50">
+      <div className="absolute bottom-0 left-0 right-0 z-10 px-8 py-6 bg-black bg-opacity-50">
         <div className="flex flex-row justify-between items-center">
           {/* 左侧文字部分 */}
           <div className="flex flex-col w-40">
             {/* 标题 */}
             <h3
-  className="text-gray-500 text-lg font-semibold leading-tight mb-2"
-  style={{
-    color: "rgb(138, 143, 152)", // 文本颜色
-    fontFamily:
-      'Linear, "SF Pro Display", -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
-    fontSize: "13px", // 字体大小
-    fontWeight: 510, // 字体粗细
-    lineHeight: "19px", // 行高
-    letterSpacing: "-0.12px", // 字母间距
-    textAlign: "left", // 左对齐
-    WebkitFontSmoothing: "antialiased",
-  }}
->
-  {title}
-</h3>
+              className="
+              text-[13px] 
+              text-gray-500 
+              font-semibold 
+              leading-[19px] 
+              tracking-[-0.12px] 
+              text-left 
+              antialiased 
+              mb-2
+            "
+            >
+              {title}
+            </h3>
             {/* 描述 */}
             <p
-  className="text-gray-400 text-sm leading-5 tracking-[-0.16px]"
-  style={{
-    fontFamily:
-      'Linear, "SF Pro Display", -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
-    fontWeight: 510, // 匹配 font-weight: 510
-    lineHeight: "23px", // 明确定义行高
-    fontSize: "15px", // 字号设置为 15px
-    color: "rgb(247, 248, 248)", // 文本颜色
-    WebkitFontSmoothing: "antialiased",
-  }}
->
-  {description}
-</p>
+              className="
+                text-[15px] 
+                text-grsay-400 
+                font-[510] 
+                leading-[23px] 
+                tracking-[-0.16px] 
+                antialiased
+              "
+            >
+              {description}
+            </p>
           </div>
 
           {/* 右侧按钮部分 */}

@@ -4,7 +4,7 @@ import SectionItem from "../fonts/SectionItem";
 
 const CollaborationSection: React.FC = () => {
   return (
-    <section className="bg-black text-white py-16 px-8">
+    <section className="bg-black text-white py-16">
       <div className="fkex flex-row max-w-6xl mx-auto">
         {/* 标题部分 */}
         <div className="flex flex-row justify-between items-end gap-12 mb-12">
@@ -13,8 +13,9 @@ const CollaborationSection: React.FC = () => {
           <SectionItem
             linkHref="#"
             linkText="Workflows and integrations"
-            headingText={["Collaborate across", " tools and teams"]}
+            headingText={"Collaborate across tools and teams"}
             iconColor="rgb(181, 154, 255)"
+            width = "100%"
           />
         </div>
 

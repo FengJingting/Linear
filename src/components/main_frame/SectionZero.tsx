@@ -5,7 +5,7 @@ interface SectionZeroProps {
   linkHref: string;
   linkText: string;
   iconColor?: string;
-  headingText: string[];
+  headingText: string;
   subHeading: string;
   description: string;
   imageSrc: string;
@@ -33,7 +33,7 @@ const SectionZero: React.FC<SectionZeroProps> = ({
       />
 
       {/* 副标题 */}
-      <p className="mt-10 text-[#8a8f98] text-[17px] font-[510] leading-[24.5px] w-[275.078px] h-[98px] break-words">
+      <p className="mt-10 text-[#8a8f98] text-[17px] font-[510] leading-[24.5px] w-80 ">
         <span className="inline text-[#f7f8f8] font-[510] text-[17px] leading-[24.5px] font-bold">
           {subHeading}
         </span>

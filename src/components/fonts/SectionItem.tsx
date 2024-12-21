@@ -4,8 +4,9 @@ import CustomHeading from "./CustomHeading"
 interface SectionItemProps {
   linkHref: string; // 超链接地址
   linkText: string; // 链接文本内容
-  headingText: string[]; // 主标题内容（数组形式，适配 CustomHeading）
+  headingText: string; // 主标题内容（数组形式，适配 CustomHeading）
   iconColor?: string; // 图标颜色，可选，默认为绿色
+  width?: string;
 }
 
 const SectionItem: React.FC<SectionItemProps> = ({
@@ -13,6 +14,7 @@ const SectionItem: React.FC<SectionItemProps> = ({
   linkText,
   headingText,
   iconColor = "#68cc58", // 默认绿色
+  width,
 }) => {
   return (
     <div>
@@ -27,7 +29,7 @@ const SectionItem: React.FC<SectionItemProps> = ({
       >
         {/* 图标 */}
         <div
-          className="w-[14px] h-[8px] rounded-full cursor-pointer box-border"
+          className="w-[14px] border border-1px border-gray-500 h-[8px] rounded-full cursor-pointer box-border"
           style={{
             backgroundColor: iconColor, // 动态设置背景颜色
           }}
@@ -50,7 +52,7 @@ const SectionItem: React.FC<SectionItemProps> = ({
       </a>
 
       {/* 主标题 */}
-      <CustomHeading lines={headingText} />
+      <CustomHeading lines={headingText} width={width}/>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import HeaderText from "./components/section_powering/HeaderText";
 import LogoGrid from "./components/section_powering/LogoGrid";
 import FeatureHeaderText from "./components/section_made/FeatureHeaderText";
 import FeatureGrid from "./components/section_made/FeatureGrid";
-import SectionHeader from "./components/section_set/SectionHeader";
 import ManageSection from "./components/section_manage/ManageSection";
 import Footer from "./components/main_frame/Footer";
 import SectionIdeate from "./components/section_ideate/SectionIdeate";
@@ -21,32 +20,34 @@ import Scroll from "./components/section_collaborate/Scroll";
 
 const App: React.FC = () => {
   return (
-    <div className="flex justify-center bg-black min-h-screen">
+    <div className="flex flex-col justify-center bg-black min-h-screen">
       {/* section-linear */}
-      <div className=" mx-[187px] px-[32px] h-full max-w-[1088px]">
-        <Navbar/>
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-40">
+          <Navbar/>
+        </div>
+        
         {/* section-linear */}
-          <div className="flex-1 mt-40">
-            <HeroTitle />
-            <ButtonGroup />
-            <PreviewImage />
-          </div>
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-10">
+          <HeroTitle />
+          <ButtonGroup />
+          <PreviewImage />
+        </div>
         {/* section-powering */}
-          <div className="flex-1 mt-60">
+          <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
             <HeaderText />
             <LogoGrid />
           </div>
         {/* section-made */}
-          <div className="flex-1 mt-60">
+          <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
             <FeatureHeaderText />
             <FeatureGrid />
           </div>
         {/* section-set */}
-        <div className="flex-1 mt-60">
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
           <SectionZero
               linkHref="#"
               linkText="Project and long-term planning"
-              headingText={["Set the product direction"]}
+              headingText={"Set the product direction"}
               subHeading="Align your team around a unified product timeline."
               description=" Plan, manage, and track all product initiatives with Linear’s visual planning tools."
               imageSrc="./public/section_set_0.png" // 替换为实际路径
@@ -55,62 +56,72 @@ const App: React.FC = () => {
         </div>
         
         {/* section-manage */}
-        <div className="flex-1 mt-60"><ManageSection
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60"><ManageSection
           leftTitle="Manage projects end-to-end"
           leftDescription="Consolidate specs, milestones, tasks, and other documentation in one centralized location."
           rightTitle="Project updates"
           rightDescription="Communicate progress and project health with built-in project updates."
         /></div>
         
-        <div className="flex-1 bg-yellow-500 mt-60">
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
           <SectionIdeate />
         </div>
         
-        <SectionInit />
+        <div className="mx-[187px] px-[32px] max-w-[1088px]">
+          <SectionInit />
+        </div>
 
-        <div className="flex-1 mt-60">
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
           <SectionZero
               linkHref="#"
               linkText="Task tracking and sprint planning"
               iconColor="rgb(212, 177, 68)"
-              headingText={["Issue tracking","you’ll enjoy using"]}
-              subHeading="Align your team around a unified product timeline."
-              description=" Optimized for speed and efficiency. Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team."
-              imageSrc="./public/section_set_0.png" // 替换为实际路径
+              headingText={"Issue tracking you’ll enjoy using"}
+              subHeading="Optimized for speed and efficiency. "
+              description="Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team."
+              imageSrc="./public/section_issue_0.png" // 替换为实际路径
               imageAlt="Section preview"
             />
         </div>
-        <div className="flex-1 mt-60">
+        <div className="mx-[187px] px-[32px] max-w-[1088px]">
         <ManageSection
-          leftTitle="Manage projects end-to-end"
-          leftDescription="Consolidate specs, milestones, tasks, and other documentation in one centralized location."
-          rightTitle="Project updates"
-          rightDescription="Communicate progress and project health with built-in project updates."
+          leftTitle="Build momentum with Cycles"
+          leftDescription="Create healthy routines and focus your team on what work should happen next."
+          rightTitle="Manage incoming work with Triage"
+          rightDescription="Review and assign incoming bug reports, feature requests, and other unplanned work."
         />
         </div>
 
-        <div className="flex-1 mt-60">
-        <InsightsSection />
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+          <InsightsSection />
         </div>
         
-        <SectionInit />
+        <div className="mx-[187px] px-[32px] max-w-[1088px]">
+          <SectionInit />
+        </div>
+        
         <div
-          className="flex-1 mt-60 "
+          className="mx-[187px] px-[32px] max-w-[1088px] mt-60 "
         >
           <CollaborationSection />
         </div>
           {/* 滑动窗口部分 */}
+          <div
+          className="mx-[187px] px-[32px] max-w-[1088px] "
+        >
           <Scroll />
+        </div>
+          
 
-        <div className="flex-1 bg-yellow-500 mt-60">
+        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60 ">
           <SectionBuilt />
         </div>
           
         
         <SectionPlan />
         
-        <Footer />
-      </div>
+        
+      <Footer />
       
     </div>
   );

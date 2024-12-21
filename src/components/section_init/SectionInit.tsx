@@ -42,7 +42,7 @@ const SectionInit: React.FC = () => {
 
       <div className="flex flex-row gap-6 max-w-screen-lg mx-auto">
         <FeatureCard
-          icon={<span>🌟</span>} // 替换为实际图标
+          icon={<span>🔗</span>} // 替换为实际图标
           title="Initiatives"
           description="Coordinate strategic product efforts."
         />
@@ -52,12 +52,12 @@ const SectionInit: React.FC = () => {
           description="Collaborate across teams and departments."
         />
         <FeatureCard
-          icon={<span>♦️</span>} // 替换为实际图标
+          icon={<span>🔗</span>} // 替换为实际图标
           title="Milestones"
           description="Break projects down into concrete phases."
         />
         <FeatureCard
-          icon={<span>📊</span>} // 替换为实际图标
+          icon={<span>🔗</span>} // 替换为实际图标
           title="Progress insights"
           description="Track scope, velocity, and progress over time."
         />
