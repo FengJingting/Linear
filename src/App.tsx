@@ -27,51 +27,51 @@ const App: React.FC = () => {
         </div>
         
         {/* section-linear */}
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-10">
+        <div className="mx-[187px] px-[50px] max-w-[1088px]">
           <HeroTitle />
           <ButtonGroup />
           <PreviewImage />
         </div>
         {/* section-powering */}
-          <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+          <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60">
             <HeaderText />
             <LogoGrid />
           </div>
         {/* section-made */}
-          <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+          <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60">
             <FeatureHeaderText />
             <FeatureGrid />
           </div>
         {/* section-set */}
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60">
           <SectionZero
               linkHref="#"
               linkText="Project and long-term planning"
               headingText={"Set the product direction"}
               subHeading="Align your team around a unified product timeline."
               description=" Plan, manage, and track all product initiatives with Linear’s visual planning tools."
-              imageSrc="./public/section_set_0.png" // 替换为实际路径
+              imageSrc="./public/section_set_0.png" 
               imageAlt="Section preview"
             />
         </div>
         
         {/* section-manage */}
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60"><ManageSection
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60"><ManageSection
           leftTitle="Manage projects end-to-end"
           leftDescription="Consolidate specs, milestones, tasks, and other documentation in one centralized location."
           rightTitle="Project updates"
           rightDescription="Communicate progress and project health with built-in project updates."
         /></div>
         
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60">
           <SectionIdeate />
         </div>
         
-        <div className="mx-[187px] px-[32px] max-w-[1088px]">
+        <div className="mx-[187px] px-[50px] max-w-[1088px]">
           <SectionInit />
         </div>
 
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60">
           <SectionZero
               linkHref="#"
               linkText="Task tracking and sprint planning"
@@ -79,50 +79,42 @@ const App: React.FC = () => {
               headingText={"Issue tracking you’ll enjoy using"}
               subHeading="Optimized for speed and efficiency. "
               description="Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team."
-              imageSrc="./public/section_issue_0.png" // 替换为实际路径
+              imageSrc="./public/section_issue_0.png" 
               imageAlt="Section preview"
             />
         </div>
-        <div className="mx-[187px] px-[32px] max-w-[1088px]">
-        <ManageSection
-          leftTitle="Build momentum with Cycles"
-          leftDescription="Create healthy routines and focus your team on what work should happen next."
-          rightTitle="Manage incoming work with Triage"
-          rightDescription="Review and assign incoming bug reports, feature requests, and other unplanned work."
-        />
+        <div className="mx-[187px] px-[50px] max-w-[1088px]">
+          <ManageSection
+            leftTitle="Build momentum with Cycles"
+            leftDescription="Create healthy routines and focus your team on what work should happen next."
+            rightTitle="Manage incoming work with Triage"
+            rightDescription="Review and assign incoming bug reports, feature requests, and other unplanned work."
+          />
         </div>
 
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60">
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60">
           <InsightsSection />
         </div>
         
-        <div className="mx-[187px] px-[32px] max-w-[1088px]">
+        <div className="mx-[187px] px-[50px] max-w-[1088px]">
           <SectionInit />
         </div>
         
-        <div
-          className="mx-[187px] px-[32px] max-w-[1088px] mt-60 "
-        >
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60 " >
           <CollaborationSection />
         </div>
-          {/* 滑动窗口部分 */}
-          <div
-          className="mx-[187px] px-[32px] max-w-[1088px] "
-        >
+          
+        <div className="mx-[187px] px-[50px] max-w-[1088px] " >
           <Scroll />
         </div>
           
-
-        <div className="mx-[187px] px-[32px] max-w-[1088px] mt-60 ">
+        <div className="mx-[187px] px-[50px] max-w-[1088px] mt-60 ">
           <SectionBuilt />
         </div>
           
-        
         <SectionPlan />
         
-        
-      <Footer />
-      
+      <Footer />  
     </div>
   );
 };

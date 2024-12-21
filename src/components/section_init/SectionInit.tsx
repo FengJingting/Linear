@@ -36,9 +36,9 @@ const SectionInit: React.FC = () => {
   return (
     <div className="bg-black py-12 px-6">
       {/* 新的 div */}
-    <div
-    className="my-10 w-full h-[1px] bg-gray-600 opacity-30"
-  ></div>
+      <div
+      className="my-10 w-full h-[1px] bg-gray-600 opacity-30"
+      ></div>
 
       <div className="flex flex-row gap-6 max-w-screen-lg mx-auto">
         <FeatureCard
